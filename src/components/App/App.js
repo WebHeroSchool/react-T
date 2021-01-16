@@ -4,7 +4,8 @@ import InputItem from '../InputItem/InputItem';
 import Footer from '../Footer/Footer';
 import styles from './App.module.css';
 
-const App = () => {
+class App extends React.Component {
+  render() {
     const items = [
       {
         value: 'Написать новое приложение',
@@ -29,6 +30,7 @@ const App = () => {
       <Footer count={3} />
       </div>
   </div>);
-}
+ }
+};
 
 export default App;
