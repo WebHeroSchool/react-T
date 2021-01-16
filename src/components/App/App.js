@@ -4,18 +4,19 @@ import InputItem from '../InputItem/InputItem';
 import Footer from '../Footer/Footer';
 import styles from './App.module.css';
 
-const App = () => {
+class App extends React.Component {
+  render() {
     const items = [
       {
         value: 'Написать новое приложение',
         isDone: true
       },
       {
-        value: 'прописать props',
+        value: 'Дочитать книгу',
         isDone: true
       },
       {
-        value: 'сделать все дела',
+        value: 'Закончить обучение',
         isDone: false
       }
     ];
@@ -23,10 +24,13 @@ const App = () => {
   return (
   <div className={styles.wrap}>
       <h1 className={styles.title}>Важные дела!</h1>
+      <div className ={styles.todosWrap}>
       <InputItem />
       <ItemList items={items} />
       <Footer count={3} />
+      </div>
   </div>);
+ }
 };
 
 export default App;
