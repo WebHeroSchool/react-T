@@ -4,7 +4,12 @@ import styles from './ItemList.module.css';
 
 const ItemList = ({ items, onClickDone }) => (<ul>
     {items.map(item => <li key={item.value} className = {styles.list} >
-      <Item value={item.value} isDone={item.isDone} onClickDone={onClickDone} />
+      <Item
+          value={item.value}
+          isDone={item.isDone}
+          id={item.id}
+          onClickDone={onClickDone}
+       />
     </li>)}
 </ul>);
 
